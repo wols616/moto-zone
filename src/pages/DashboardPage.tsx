@@ -4,6 +4,7 @@ import { useData } from "@/context/DataContext";
 import { useAuth } from "@/context/AuthContext";
 import { format } from "date-fns";
 import { es } from "date-fns/locale"; // Import Spanish locale
+import { ShoppingCart, History, LayoutDashboard } from "lucide-react"; // Import missing icons
 
 const DashboardPage = () => {
   const { sales, products, services } = useData();
