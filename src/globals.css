@@ -49,6 +49,16 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom Moto-Zone colors */
+    --moto-red: 0 84.2% 60.2%;
+    --moto-red-dark: 0 70% 45%;
+    --moto-red-light: 0 84.2% 75%;
+    --moto-white: 0 0% 98%;
+    --moto-white-dark: 0 0% 90%;
+    --moto-gray: 215.4 16.3% 46.9%;
+    --moto-gray-dark: 222.2 47.4% 11.2%;
+    --moto-gray-light: 210 40% 96.1%;
   }
 
   .dark {
@@ -87,6 +97,16 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom Moto-Zone colors for dark mode */
+    --moto-red: 0 84.2% 60.2%;
+    --moto-red-dark: 0 70% 45%;
+    --moto-red-light: 0 84.2% 75%;
+    --moto-white: 222.2 84% 4.9%; /* Dark background for dark mode */
+    --moto-white-dark: 217.2 32.6% 17.5%;
+    --moto-gray: 215 20.2% 65.1%;
+    --moto-gray-dark: 210 40% 98%; /* Light text for dark mode */
+    --moto-gray-light: 217.2 32.6% 17.5%;
   }
 }
 

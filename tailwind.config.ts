@@ -62,6 +62,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom Moto-Zone colors
+        motoRed: {
+          DEFAULT: "hsl(0 84.2% 60.2%)", // A vibrant red
+          dark: "hsl(0 70% 45%)", // A darker red for hover/active states
+          light: "hsl(0 84.2% 75%)", // A lighter red
+        },
+        motoWhite: {
+          DEFAULT: "hsl(0 0% 98%)", // Off-white for backgrounds
+          dark: "hsl(0 0% 90%)", // Slightly darker white
+        },
+        motoGray: {
+          DEFAULT: "hsl(215.4 16.3% 46.9%)", // Medium gray for text
+          dark: "hsl(222.2 47.4% 11.2%)", // Dark gray/black for primary text
+          light: "hsl(210 40% 96.1%)", // Light gray for subtle backgrounds
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
