@@ -1,12 +1,21 @@
 export interface Product {
   id: string;
   name: string;
-  image: string; // URL to product image
-  description: string;
+  image: string | null; // URL to product image
+  description: string | null;
   price: number;
-  category: string;
+  category_id: string;
   stock: number;
-  lowStockThreshold: number; // For inventory alerts
+  low_stock_threshold: number; // For inventory alerts
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface Service {
@@ -14,28 +23,35 @@ export interface Service {
   name: string;
   description: string;
   price: number;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface SaleItem {
-  id: string; // Product or Service ID
-  type: "product" | "service";
+  id?: string; // Optional for new items
+  sale_id?: string; // Optional for new items
+  item_id: string | null; // Product or Service ID
+  item_type: "product" | "service";
   name: string;
   price: number;
   quantity: number;
-  discount?: number; // Discount per item in percentage
+  discount?: number; // Discount per item (percentage or amount)
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface Sale {
-  id: string;
+  id?: string; // Optional for new sales
   date: string; // ISO date string
-  items: SaleItem[];
   subtotal: number;
-  taxRate: number; // e.g., 0.16 for 16%
-  taxAmount: number;
-  discountTotal: number; // Total discount applied to the sale
+  tax_rate: number; // e.g., 0.16 for 16%
+  tax_amount: number;
+  discount_total: number; // Total discount applied to the sale
   total: number;
-  paymentMethod: string;
-  cashierId: string; // ID of the user who made the sale
+  payment_method: string;
+  cashier_id: string; // ID of the user who made the sale
+  items?: SaleItem[]; // Optional items array
+  created_at?: string;
 }
 
 export interface User {

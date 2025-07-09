@@ -102,10 +102,12 @@
     --moto-red: 0 84.2% 60.2%;
     --moto-red-dark: 0 70% 45%;
     --moto-red-light: 0 84.2% 75%;
-    --moto-white: 222.2 84% 4.9%; /* Dark background for dark mode */
+    --moto-white: 222.2 84% 4.9%;
+    /* Dark background for dark mode */
     --moto-white-dark: 217.2 32.6% 17.5%;
     --moto-gray: 215 20.2% 65.1%;
-    --moto-gray-dark: 210 40% 98%; /* Light text for dark mode */
+    --moto-gray-dark: 210 40% 98%;
+    /* Light text for dark mode */
     --moto-gray-light: 217.2 32.6% 17.5%;
   }
 }
@@ -117,5 +119,22 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Transición suave para el menú móvil */
+nav {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Asegurar que el contenido no quede detrás del botón móvil */
+body {
+  padding-left: 4rem;
+  /* Ajusta según el tamaño de tu botón */
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: 0;
   }
 }
